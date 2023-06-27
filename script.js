@@ -15,10 +15,12 @@ const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=
 fetch(apiUrl)
   .then((response) => response.json())
   .then((data) => {
-    const name = data.name;
-    const country = data.sys.country;
-    const temp = data.main.temp;
-    const weather = data.weather[0]["main"];
+    result.textContent = `
+    City: ${data.name}
+    country: ${data.sys.country}
+    temp: ${data.main.temp}
+    weather = ${data.weather[0]["main"]}
+    `;
 
 
     console.log( `Country: ${country}, City: ${name}, weather: ${weather}, temp: ${temp}`
@@ -28,6 +30,12 @@ fetch(apiUrl)
   })
   .catch((error) => console.error(error));
 
-  //
+  //adding all the results into the result div
+//   result.textContent = `
+//   name: ${data.name}
+//   country: ${data.country}
+//   temp: ${data.main.temp}
+//   weather = ${data.weather[0]["main"]}
+//   `
 });
 
