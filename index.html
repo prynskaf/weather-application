@@ -8,11 +8,33 @@
     <script defer src="script.js"></script>
 </head>
 <body>
-    <h1>Weather Application</h1>
-    <input type="text" id="cityNameInput" placeholder="Enter City Name">
-    <button id="submitButton">Enter</button>
-    <div class="resultsContainer">
-        <div class="resultSelect"></div>
+  <div class="card">
+    <div class="search">
+        <input type="text" placeholder="enter city name:" spellcheck="false">
+        <button><img src="images/search.png"></button>
     </div>
+    <div class="weather">
+        <img src="images/rain.png" alt="rain pic" class="weather-icon">
+        <h1 class="temp">22°C</h1>
+        <h2 class="city">Brussels</h2>
+        <div class="details">
+            <div class="col">
+                <img src="images/humidity.png" alt="humididy image">
+                <div>
+                    <p class="humidity">50%</p>
+                    <p>Humididy</p>
+                </div>
+            <div class="col">
+                <img src="images/wind.png" alt="wind image">
+                <div>
+                    <p class="Wind">15 km/h</p>
+                    <p>Wind speed</p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+
 </body>
 </html>
